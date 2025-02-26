@@ -5,6 +5,9 @@ import { ClientsService } from '../../services/api-client/clients/clients.servic
 import { ClientFormComponent } from "../components/client-form/client-form.component";
 import { Subscription } from 'rxjs';
 import { ClientModelForm } from '../client.models';
+import { ISnackbarManagerService } from '../../services/isnackbar-manager.service';
+import { SnackbarManagerService } from '../../services/snackbar-manager.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-client',
@@ -12,7 +15,8 @@ import { ClientModelForm } from '../client.models';
   templateUrl: './new-client.component.html',
   styleUrl: './new-client.component.scss',
   providers: [
-    { provide: SERVICES_TOKEN.HTTP.CLIENT, useClass: ClientsService }
+    { provide: SERVICES_TOKEN.HTTP.CLIENT, useClass: ClientsService },
+    { provide: SERVICES_TOKEN.SNACKBAR, useClass: SnackbarManagerService}
   ]
 })
 export class NewClientComponent implements OnDestroy {
@@ -21,7 +25,10 @@ export class NewClientComponent implements OnDestroy {
   private httpSubscription?: Subscription
 
   constructor(
-    @Inject(SERVICES_TOKEN.HTTP.CLIENT) private readonly httpService: ICLientService) { }
+    @Inject(SERVICES_TOKEN.HTTP.CLIENT) private readonly httpService: ICLientService,
+    @Inject(SERVICES_TOKEN.SNACKBAR) private readonly snackBarManager: ISnackbarManagerService,
+    private readonly router: Router
+  ) { }
 
 
     ngOnDestroy(): void {
@@ -33,6 +40,8 @@ export class NewClientComponent implements OnDestroy {
     onSubmitClient(value: ClientModelForm) {
       const { id, ...request } = value
       this.httpSubscription = this.httpService.save(request).subscribe(_ => {
+        this.snackBarManager.show('Usuário cadastrado com sucesso')
+        this.router.navigate(['clients/list'])
       })
     }
 }
