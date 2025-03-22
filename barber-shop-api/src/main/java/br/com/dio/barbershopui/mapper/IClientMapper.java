@@ -1,4 +1,4 @@
-package main.java.br.com.dio.barbershopui.mapper;
+package br.com.dio.barbershopui.mapper;
 
 import br.com.dio.barbershopui.controller.request.SaveClientRequest;
 import br.com.dio.barbershopui.controller.request.UpdateClientRequest;

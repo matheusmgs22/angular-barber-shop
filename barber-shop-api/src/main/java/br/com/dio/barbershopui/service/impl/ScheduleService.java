@@ -1,8 +1,9 @@
-package main.java.br.com.dio.barbershopui.service.impl;
+package br.com.dio.barbershopui.service.impl;
 
+import br.com.dio.barbershopui.IScheduleService;
 import br.com.dio.barbershopui.entity.ScheduleEntity;
 import br.com.dio.barbershopui.repository.IScheduleRepository;
-import br.com.dio.barbershopui.service.IScheduleService;
+
 import br.com.dio.barbershopui.service.query.IScheduleQueryService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

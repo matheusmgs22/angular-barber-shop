@@ -1,4 +1,4 @@
-package main.java.br.com.dio.barbershopui;
+package br.com.dio.barbershopui;
 
 import br.com.dio.barbershopui.entity.ClientEntity;
 

@@ -1,10 +1,11 @@
-package main.java.br.com.dio.barbershopui.controller;
+package br.com.dio.barbershopui.controller;
 
+import br.com.dio.barbershopui.IScheduleService;
 import br.com.dio.barbershopui.controller.request.SaveScheduleRequest;
 import br.com.dio.barbershopui.controller.response.SaveScheduleResponse;
 import br.com.dio.barbershopui.controller.response.ScheduleAppointmentMonthResponse;
 import br.com.dio.barbershopui.mapper.IScheduleMapper;
-import br.com.dio.barbershopui.service.IScheduleService;
+
 import br.com.dio.barbershopui.service.query.IScheduleQueryService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;

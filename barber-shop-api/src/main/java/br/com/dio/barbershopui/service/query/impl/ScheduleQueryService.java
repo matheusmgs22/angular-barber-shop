@@ -1,4 +1,4 @@
-package main.java.br.com.dio.barbershopui.service.query.impl;
+package br.com.dio.barbershopui.service.query.impl;
 
 import br.com.dio.barbershopui.entity.ScheduleEntity;
 import br.com.dio.barbershopui.exception.NotFoundException;

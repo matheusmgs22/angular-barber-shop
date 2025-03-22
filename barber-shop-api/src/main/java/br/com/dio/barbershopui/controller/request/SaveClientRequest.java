@@ -1,4 +1,4 @@
-package main.java.br.com.dio.barbershopui.controller.request;
+package br.com.dio.barbershopui.controller.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Email;

@@ -1,4 +1,4 @@
-package main.java.br.com.dio.barbershopui.entity;
+package br.com.dio.barbershopui.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

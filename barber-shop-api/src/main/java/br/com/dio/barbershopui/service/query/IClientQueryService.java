@@ -1,4 +1,4 @@
-package main.java.br.com.dio.barbershopui.service.query;
+package br.com.dio.barbershopui.service.query;
 
 import br.com.dio.barbershopui.entity.ClientEntity;
 

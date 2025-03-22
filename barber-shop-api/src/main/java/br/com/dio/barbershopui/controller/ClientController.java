@@ -1,5 +1,6 @@
-package main.java.br.com.dio.barbershopui.controller;
+package br.com.dio.barbershopui.controller;
 
+import br.com.dio.barbershopui.IClientService;
 import br.com.dio.barbershopui.controller.request.SaveClientRequest;
 import br.com.dio.barbershopui.controller.request.UpdateClientRequest;
 import br.com.dio.barbershopui.controller.response.ClientDetailResponse;
@@ -7,7 +8,7 @@ import br.com.dio.barbershopui.controller.response.ListClientResponse;
 import br.com.dio.barbershopui.controller.response.SaveClientResponse;
 import br.com.dio.barbershopui.controller.response.UpdateClientResponse;
 import br.com.dio.barbershopui.mapper.IClientMapper;
-import br.com.dio.barbershopui.service.IClientService;
+
 import br.com.dio.barbershopui.service.query.IClientQueryService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package main.java.br.com.dio.barbershopui.controller.response;
+package br.com.dio.barbershopui.controller.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;

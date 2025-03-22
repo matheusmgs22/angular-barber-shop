@@ -1,8 +1,9 @@
-package main.java.br.com.dio.barbershopui.service.impl;
+package br.com.dio.barbershopui.service.impl;
 
+import br.com.dio.barbershopui.IClientService;
 import br.com.dio.barbershopui.entity.ClientEntity;
 import br.com.dio.barbershopui.repository.IClientRepository;
-import br.com.dio.barbershopui.service.IClientService;
+
 import br.com.dio.barbershopui.service.query.IClientQueryService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
