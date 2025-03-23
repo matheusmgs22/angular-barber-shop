@@ -5,6 +5,7 @@ import { ClientModelForm } from '../../client.models';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+
 @Component({
   selector: 'app-client-form',
   imports: [
@@ -17,7 +18,6 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './client-form.component.html',
   styleUrl: './client-form.component.scss'
 })
-
 export class ClientFormComponent {
 
   @Input() client: ClientModelForm = { id: 0, name: '', email: '', phone: '' }
@@ -25,6 +25,7 @@ export class ClientFormComponent {
   @Output() clientSubmited = new EventEmitter<ClientModelForm>();
 
   onSubmit(_: NgForm) {
+    console.log(this.client)
     this.clientSubmited.emit(this.client)
   }
 

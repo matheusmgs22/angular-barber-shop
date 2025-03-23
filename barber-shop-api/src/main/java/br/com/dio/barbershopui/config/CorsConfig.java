@@ -1,4 +1,4 @@
-package main.java.br.com.dio.barbershop_ui.config;
+package br.com.dio.barbershopui.config;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;

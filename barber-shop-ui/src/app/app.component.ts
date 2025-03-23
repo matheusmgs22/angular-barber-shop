@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { CardHeaderComponent } from './commons/components/card-header/card-header.component';
 import { filter, map, Subscription } from 'rxjs';
+import { CardHeaderComponent } from './commons/components/card-header/card-header.component';
 import { MenuBarComponent } from './commons/components/menu-bar/menu-bar.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { MenuBarComponent } from './commons/components/menu-bar/menu-bar.compone
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'barber-shop-ui';
 
   private routeSubscription?: Subscription;

@@ -7,5 +7,11 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { provideNgxMask } from 'ngx-mask';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync(),provideHttpClient(withInterceptorsFromDi()),provideNgxMask({}) ]
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideAnimationsAsync(),
+    provideHttpClient(withInterceptorsFromDi()),
+    provideNgxMask({})
+  ]
 };
